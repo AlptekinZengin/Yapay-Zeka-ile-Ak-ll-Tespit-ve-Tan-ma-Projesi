@@ -1,0 +1,26 @@
+# detect.py
+# Basit bir evcil hayvan (kedi/köpek) tespit sistemi - YOLOv5 ile
+
+import torch
+from pathlib import Path
+import argparse
+
+
+def run_detection(source):
+    # YOLOv5 modelini yükleniyor (internet bağlantısı gerekir ilk çalıştırmada)
+    model = torch.hub.load('ultralytics/yolov5', 'yolov5s')
+
+    # Tahmin
+    results = model(source)
+
+    # Sonuçları göster ve kaydet
+    results.print()
+    results.save(save_dir='outputs')
+    print("\nSonuçlar 'outputs/' klasörüne kaydedildi.")
+
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--source', type=str, default='data/test.jpg', help='Girdi dosyası veya kamera (0)')
+    args = parser.parse_args()
+    run_detection(args.source)
