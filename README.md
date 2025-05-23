@@ -30,6 +30,7 @@ Sistem, barınaklar, veteriner klinikleri ve güvenlik sistemlerinde kullanılma
 # Kurulum Adımları
 
 git clone (https://github.com/AlptekinZengin/Yapay-Zeka-ile-Ak-ll-Tespit-ve-Tan-ma-Projesi/blob/main/Evcil%20Hayvan%20Tan%C4%B1ma%20Sistemi%20(kedi%2C%20k%C3%B6pek))
+
 cd evcil-hayvan-tanima
 pip install -r requirements.txt
 python detect.py --source "veri/test.jpg"
