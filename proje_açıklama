@@ -1,13 +1,12 @@
 # Evcil Hayvan Tanıma Sistemi (Kedi/Köpek)
 
-Evcil Hayvan Tanıma Sistemi (Kedi/Köpek), görüntüler veya video akışı üzerinden kedi ve köpekleri otomatik olarak tespit eden bir yapay zekâ uygulamasıdır. Bu sistem, YOLOv5 gibi derin öğrenme tabanlı nesne 
-tanıma algoritmalarını kullanarak, evcil hayvanların konumlarını belirler ve görsel çıktılarla etiketlenmiş olarak sunar. Barınaklarda, veteriner kliniklerinde veya akıllı güvenlik sistemlerinde kullanıma uygundur.
-
+Bu proje, YOLOv5 modelini kullanarak gerçek zamanlı kedi ve köpek tespiti yapan bir yapay zeka uygulamasıdır.
 
 # Projenin Amacı
 
-Bu proje, görsel ya da video görüntüler üzerinden kedileri ve köpekleri doğru bir şekilde tespit eden yapay zekâ tabanlı bir sistem geliştirmeyi amaçlar. 
-Sistem, barınaklar, veteriner klinikleri ve güvenlik sistemlerinde kullanılmak üzere tasarlanabilir.
+-Evcil hayvan sahipleri için otomatik tanıma sistemi geliştirmek
+-Hayvan barınaklarında otomatik sınıflandırma yapmak
+-Akıllı ev sistemlerinde evcil hayvan takibi sağlamak
 
 
 #  Hedef Kullanıcı Kitlesi
@@ -20,16 +19,55 @@ Sistem, barınaklar, veteriner klinikleri ve güvenlik sistemlerinde kullanılma
 
 # Kullanılan Teknolojiler / Algoritmalar
 
--Python
--OpenCV
--YOLOv5 / YOLOv8 (önceden eğitilmiş model)
+-Python 3.10
 -PyTorch
--NumPy
+-YOLOv5s modeli
+-OpenCV
 
 
 # Kurulum Adımları
 
-git clone (https://github.com/AlptekinZengin/Yapay-Zeka-ile-Ak-ll-Tespit-ve-Tan-ma-Projesi/blob/main/Evcil%20Hayvan%20Tan%C4%B1ma%20Sistemi%20(kedi%2C%20k%C3%B6pek))
-cd evcil-hayvan-tanima
-pip install -r requirements.txt
-python detect.py --source "veri/test.jpg"
+-pip install -r requirements.txt
+-python pet_detection.py
+
+
+# Örnek Çıktılar
+
+
+
+# Proje Dosya Yapısı
+
+akilli-evcil-hayvan-tanima/
+│
+├── veriler/                  # Eğitim/Test verileri (opsiyonel)
+│   ├── kediler/
+│   └── kopekler/
+│
+├── ciktilar/                 # Tespit sonuçları
+│   ├── ornek_tespit1.jpg
+│   ├── ornek_tespit2.jpg
+│   └── demo_video.mp4
+│
+├── src/                      # Kaynak kodlar
+│   ├── main.py               # Ana uygulama
+│   ├── utils.py              # Yardımcı fonksiyonlar
+│   └── requirements.txt      # Gereksinimler
+│
+├── docs/                     # Dokümantasyon
+│   ├── proje_raporu.md
+│   └── sunum.pdf
+│
+├── poster/                   # Proje posteri
+│   ├── poster_tasarim.psd
+│   └── proje_posteri.pdf
+│
+└── README.md                 # Proje tanıtımı
+
+# Katkı Yapanlar
+
+Alptekin Zengin - 2405902017 - Yapay Zeka Operatörlüğü
+
+
+# İş Bölümü
+
+Alptekin Zengin : Tüm İşleri Yapan
